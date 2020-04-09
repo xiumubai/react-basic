@@ -1,10 +1,10 @@
 import React from 'react'
-import ReduxPage from './pages/ReduxPage'
+import PureComponentPage from './pages/PureComponentPage'
 
 function App() {
   return (
     <div>
-      <ReduxPage />
+      <PureComponentPage />
     </div>
   )
 }
