@@ -1,10 +1,10 @@
 import React from 'react'
-import UseMemopage from './pages/UseMemopage'
+import UseCallbackPage from './pages/UseCallbackPage'
 
 function App() {
   return (
     <div>
-      <UseMemopage />
+      <UseCallbackPage />
     </div>
   )
 }
