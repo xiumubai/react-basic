@@ -15,9 +15,16 @@ class LifeCircleComponent extends Component {
     }
     console.log('constructor')
   }
-  UNSAFE_componentWillMount() {
-    console.log('componentWillMount')
+
+  static getDerivedStateFromProps(prop, state) {
+    console.log('getDerivedStateFromProps')
+    const { count } = state
+    return count > 5 ? { count: 0 } : null
   }
+
+  // UNSAFE_componentWillMount() {
+  //   console.log('componentWillMount')
+  // }
   componentDidMount() {
     console.log('componentDidMount')
   }
@@ -26,11 +33,18 @@ class LifeCircleComponent extends Component {
     console.log('shouldComponentUpdate', nextState)
     return true
   }
-  UNSAFE_componentWillUpdate() {
-    console.log('componentWillUpdate')
+
+  getSnapshotBeforeUpdate(prveProps, prveState) {
+    console.log('getSnapShotBeforeUpdate', prveState)
+    return {
+      msg: '我是getSnapshotBeforeUpdate',
+    }
   }
-  componentDidUpdate() {
-    console.log('componentDidUpdate')
+  // UNSAFE_componentWillUpdate() {
+  //   console.log('componentWillUpdate')
+  // }
+  componentDidUpdate(prveProps, prveState, snapshot) {
+    console.log('componentDidUpdate', prveProps, prveState, snapshot)
   }
   setCount = () => {
     this.setState({
@@ -55,13 +69,13 @@ class LifeCircleComponent extends Component {
 
 class Child extends Component {
   componentWillUnmount() {
-    console.log('componentWillUnmount')
+    console.log('child componentWillUnmount')
   }
 
   // 组件首次渲染的时候不会在执行，只有在已挂载组件收到新的props的时候，才会进行更新
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps', nextProps)
-  }
+  // UNSAFE_componentWillReceiveProps(nextProps) {
+  //   console.log('child componentWillReceiveProps', nextProps)
+  // }
 
   render() {
     console.log('child render')
