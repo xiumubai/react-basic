@@ -1,10 +1,10 @@
 import React from 'react'
-import LifeCircleComponent from './pages/LifeCircleComponent'
+import ReduxPage from './pages/ReduxPage'
 
 function App() {
   return (
     <div>
-      <LifeCircleComponent />
+      <ReduxPage />
     </div>
   )
 }
