@@ -1,10 +1,10 @@
 import React from 'react'
-import LifeCircleComponent from './pages/LifeCircleComponent'
+import HomePage from './pages/HomePage'
 
 function App() {
   return (
     <div>
-      <LifeCircleComponent />
+      <HomePage />
     </div>
   )
 }
