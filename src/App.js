@@ -1,10 +1,10 @@
 import React from 'react'
-import PureComponentPage from './pages/PureComponentPage'
+import HookPage from './pages/HookPage'
 
 function App() {
   return (
     <div>
-      <PureComponentPage />
+      <HookPage />
     </div>
   )
 }
