@@ -30,3 +30,8 @@ function useClock() {
   }, [])
   return date
 }
+
+// **hook的使用规则**
+
+// - 只能在函数最外层调⽤用 Hook。不不要在循环、条件判断或者⼦子函数中调⽤用。
+// - 只能在React 的函数组件中调⽤用 Hook。不要在其他 JavaScript 函数中调⽤用。（还有一个地⽅可以调⽤Hook —— 就是自定义的 Hook 中）
