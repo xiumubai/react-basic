@@ -1,10 +1,10 @@
 import React from 'react'
-import HookPage from './pages/HookPage'
+import UseMemopage from './pages/UseMemopage'
 
 function App() {
   return (
     <div>
-      <HookPage />
+      <UseMemopage />
     </div>
   )
 }
