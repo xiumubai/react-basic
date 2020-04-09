@@ -15,7 +15,7 @@ class LifeCircleComponent extends Component {
     }
     console.log('constructor')
   }
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     console.log('componentWillMount')
   }
   componentDidMount() {
@@ -26,7 +26,7 @@ class LifeCircleComponent extends Component {
     console.log('shouldComponentUpdate', nextState)
     return true
   }
-  componentWillUpdate() {
+  UNSAFE_componentWillUpdate() {
     console.log('componentWillUpdate')
   }
   componentDidUpdate() {
@@ -59,7 +59,7 @@ class Child extends Component {
   }
 
   // 组件首次渲染的时候不会在执行，只有在已挂载组件收到新的props的时候，才会进行更新
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     console.log('componentWillReceiveProps', nextProps)
   }
 
