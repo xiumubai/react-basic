@@ -31,7 +31,7 @@ class LifeCircleComponent extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate', nextState)
-    return true
+    // return true
   }
 
   getSnapshotBeforeUpdate(prveProps, prveState) {

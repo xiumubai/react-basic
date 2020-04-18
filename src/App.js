@@ -1,10 +1,11 @@
 import React from 'react'
-import HocPage from './pages/HocPage'
+import Layout from './pages/Layout'
+import './index.css'
 
 function App() {
   return (
     <div>
-      <HocPage />
+      <Layout />
     </div>
   )
 }
