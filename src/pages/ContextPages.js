@@ -16,12 +16,21 @@ class ContextPages extends Component {
       },
     }
   }
+  onChangeColor = () => {
+    const { themeColor } = this.state.theme
+    this.setState({
+      theme: {
+        themeColor: themeColor === 'red' ? 'green' : 'red',
+      },
+    })
+  }
   render() {
     const { theme, user } = this.state
 
     return (
       <div>
         <h3>ContextPages</h3>
+        <button onClick={this.onChangeColor}>点击改变颜色</button>
         {/* <ContextTypePage {...theme} /> */}
         {/* 使用Context.Provider传递值 */}
         <ThemeContext.Provider value={theme}>
