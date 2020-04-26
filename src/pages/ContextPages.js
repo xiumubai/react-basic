@@ -18,6 +18,7 @@ class ContextPages extends Component {
       <div>
         <h3>ContextPages</h3>
         {/* <ContextTypePage {...theme} /> */}
+        {/* 使用Context.Provider传递值 */}
         <ThemeContext.Provider value={theme}>
           <ContextTypePage />
         </ThemeContext.Provider>
