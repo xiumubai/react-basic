@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ContextTypePage from './ContextTypePage'
+import { ThemeContext } from '../Context'
 
 class ContextPages extends Component {
   constructor(props) {
@@ -16,7 +17,10 @@ class ContextPages extends Component {
     return (
       <div>
         <h3>ContextPages</h3>
-        <ContextTypePage {...theme} />
+        {/* <ContextTypePage {...theme} /> */}
+        <ThemeContext.Provider value={theme}>
+          <ContextTypePage />
+        </ThemeContext.Provider>
       </div>
     )
   }
