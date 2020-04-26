@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ThemeContext } from '../Context'
-class ContextTypePage extends Component {
-  // 用创建的Context申明一下type
+export default class ContextTypePage extends Component {
+  // 用创建的Context申明一下type，只能使用在class组件中
   static contextType = ThemeContext
   render() {
     console.log(this)
@@ -12,5 +12,3 @@ class ContextTypePage extends Component {
     return <div className={themeColor}>ContextTypePage</div>
   }
 }
-
-export default ContextTypePage
