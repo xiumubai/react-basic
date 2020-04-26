@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ContextTypePage from './ContextTypePage'
 import UseContextPage from './UseContextPage'
+import Consumerpage from './Consumerpage'
 import { ThemeContext, UserContext } from '../Context'
 
 class ContextPages extends Component {
@@ -27,6 +28,7 @@ class ContextPages extends Component {
           <UserContext.Provider value={user}>
             <ContextTypePage />
             <UseContextPage />
+            <Consumerpage />
           </UserContext.Provider>
         </ThemeContext.Provider>
       </div>
