@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ContextTypePage from './ContextTypePage'
 import UseContextPage from './UseContextPage'
-import { ThemeContext } from '../Context'
+import { ThemeContext, UserContext } from '../Context'
 
 class ContextPages extends Component {
   constructor(props) {
@@ -10,10 +10,13 @@ class ContextPages extends Component {
       theme: {
         themeColor: 'red',
       },
+      user: {
+        name: 'janney',
+      },
     }
   }
   render() {
-    const { theme } = this.state
+    const { theme, user } = this.state
 
     return (
       <div>
@@ -21,8 +24,10 @@ class ContextPages extends Component {
         {/* <ContextTypePage {...theme} /> */}
         {/* 使用Context.Provider传递值 */}
         <ThemeContext.Provider value={theme}>
-          <ContextTypePage />
-          <UseContextPage />
+          <UserContext.Provider value={user}>
+            <ContextTypePage />
+            <UseContextPage />
+          </UserContext.Provider>
         </ThemeContext.Provider>
       </div>
     )
