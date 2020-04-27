@@ -1,11 +1,11 @@
 import React from 'react'
 import './index.css'
-import MyRCFieldForm from './pages/MyRCFieldForm'
+import Modalpage from './pages/Modalpage'
 
 function App() {
   return (
     <div>
-      <MyRCFieldForm />
+      <Modalpage />
     </div>
   )
 }
