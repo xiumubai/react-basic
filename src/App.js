@@ -1,11 +1,11 @@
 import React from 'react'
 import './index.css'
-import ContextPages from './pages/ContextPages'
+import MyRCFieldForm from './pages/MyRCFieldForm'
 
 function App() {
   return (
     <div>
-      <ContextPages />
+      <MyRCFieldForm />
     </div>
   )
 }
